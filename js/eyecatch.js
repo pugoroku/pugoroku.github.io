@@ -45,7 +45,7 @@ $(() => {
 
     { // sugoroku
         const geometry = new THREE.PlaneGeometry(0.424, 1.694);
-        const texture = THREE.ImageUtils.loadTexture("/img/texture/sugoroku.png");
+        const texture = new THREE.TextureLoader().load("/img/texture/sugoroku.png");
         texture.minFilter = THREE.LinearMipMapLinearFilter;
         texture.magFilter = THREE.LinearFilter;
         texture.anisotropy = 16;
@@ -59,11 +59,30 @@ $(() => {
         scene.add(plane);
     }
 
+    { // dice
+        const geometry = new THREE.BoxGeometry(0.02, 0.02, 0.02);
+        const materials = [];
+        const textureLoader = new THREE.TextureLoader();
+        for (const i of [3, 4, 1, 6, 2, 5]) {
+            const texture = textureLoader.load("/img/texture/" + i + ".png");
+            texture.minFilter = THREE.LinearFilter;
+            texture.magFilter = THREE.LinearFilter;
+            const material = new THREE.MeshLambertMaterial({
+                map: texture,
+            });
+            materials.push(material);
+        }
+        const dice = new THREE.Mesh(geometry, materials);
+        dice.position.set(0.17, 0.01, 0.02);
+        dice.rotation.set(0, 25 / 180 * Math.PI, 0);
+        scene.add(dice);
+    }
+
     const createCharacterObject = (name) => {
         const characterObject = new THREE.Object3D();
         { // board
             const geometry = new THREE.PlaneGeometry(0.04, 0.065);
-            const texture = THREE.ImageUtils.loadTexture("/img/texture/" + name + ".png");
+            const texture = new THREE.TextureLoader().load("/img/texture/" + name + ".png");
             texture.minFilter = THREE.LinearMipMapLinearFilter;
             texture.magFilter = THREE.LinearFilter;
             texture.anisotropy = 16;
