@@ -15,8 +15,8 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md fixed-top">
-    <a class="navbar-brand" href="#">プゴロク</a>
+  <nav class="navbar navbar-expand-md fixed-top pg-bd-theme">
+    <a class="navbar-brand" href="#"><img src="/img/logo.png" alt="プゴロク" /></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,13 +25,13 @@
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#about">『プゴロク』とは <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#download">ダウンロード</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#">Disabled</a>
+          <a class="nav-link" href="#contact">お問い合わせ</a>
         </li>
       </ul>
     </div>
@@ -41,43 +41,62 @@
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <section class="jumbotron">
+      <canvas id="eyecatch"></canvas>
+    </section>
+
+    <section class="pg-bg-normal">
       <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 col-sm-12">
+            <h2>プログラミング × すごろく</h2>
+            <p>『プゴロク』は、プログラミングについて学ぶためのすごろくです。すごろくで遊ぶことを通して、プログラミングの考え方を身に付けられます。</p>
+            <p class="pg-button"><a class="btn btn-primary btn-lg" href="#about" role="button">もっと詳しく &raquo;</a></p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section>
+    <section id="about" class="pg-bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-              Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+          <div class="col-md-8 offset-md-2 col-sm-12">
+            <h2>『プゴロク』とは</h2>
+            <h3>Coming soon.</h3>
           </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-              condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-              Donec sed odio dui. </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="pg-bg-normal">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 col-sm-12">
+            <h2>ダウンロード</h2>
+            <h3>Coming soon.</h3>
           </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
-              porta
-              felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
-              fermentum
-              massa justo sit amet risus.</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="pg-bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 offset-md-2 col-sm-12">
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="container">
-    <p>&copy; Yuta Koshizawa 2019</p>
+  <footer class="pg-bd-theme">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">&copy; Yuta Koshizawa 2019</div>
+        <div class="col-md-5 pg-right">
+          <a href="">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
   <!-- Optional JavaScript -->
@@ -91,6 +110,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.min.js"></script>
+  <script src="/js/eyecatch.js"></script>
 </body>
 
 </html>

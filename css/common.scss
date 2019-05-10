@@ -4,16 +4,73 @@
 @charset "utf-8";
 @import "color";
 
+body {
+    background-color: $theme-color;
+}
+
 .jumbotron {
     background-color: $theme-color;
     color: $theme-text-color;
     margin-top: 0;
     margin-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
     border-radius: 0;
 }
 
 nav {
+    @extend .pg-bg-theme;
+
+    .navbar-brand {
+        img {
+            height: 50px;
+        }
+    }
+}
+
+section {
+    background-color: $normal-color;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+footer {
+    @extend .pg-bg-theme;
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    .pg-right {
+        text-align: right;
+    }
+}
+
+h2,h3 {
+    text-align: center;
+}
+
+a {
+    color: $theme-color;
+}
+
+.btn-primary {
+    background-color: $accent-color;
+    border-color: $accent-color;
+}
+
+p.pg-button {
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    vertical-align: bottom;
+}
+
+.pg-bg-theme {
     color: $theme-text-color;
+    background-color: $theme-color;
 
     a {
         color: $theme-link-color;
@@ -24,15 +81,10 @@ nav {
     }
 }
 
-section {
+.pg-bg-normal {
     background-color: $normal-color;
-    margin-top: 4px;
-    padding-top: 20px;
-    padding-bottom: 20px;
 }
 
-.btn-secondary {
-    background-color: $accent-color;
-    border: white 4px;
-    border-radius: 99px;
+.pg-bg-light {
+    background-color: white;
 }
