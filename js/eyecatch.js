@@ -2,7 +2,7 @@ $(() => {
     const calculateHeight = (width) => {
         const height = width / 16 * 9;
         if (height > 480) { return 480; }
-        if (height < 200) { return 200; }
+        if (height < 280) { return 280; }
         return height;
     }
 
