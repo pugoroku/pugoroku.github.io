@@ -1,0 +1,38 @@
+---
+---
+
+@charset "utf-8";
+@import "color";
+
+.jumbotron {
+    background-color: $theme-color;
+    color: $theme-text-color;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+nav {
+    color: $theme-text-color;
+
+    a {
+        color: $theme-link-color;
+
+        &:hover {
+            color: $theme-link-color-hover;
+        }
+    }
+}
+
+section {
+    background-color: $normal-color;
+    margin-top: 4px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.btn-secondary {
+    background-color: $accent-color;
+    border: white 4px;
+    border-radius: 99px;
+}
