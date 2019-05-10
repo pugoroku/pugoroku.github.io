@@ -88,3 +88,16 @@ canvas {
 .pg-bg-light {
     background-color: white;
 }
+
+.pg-safe-area {
+    padding-right: constant(safe-area-inset-right);
+    padding-left: constant(safe-area-inset-left);
+}
+
+.pg-safe-area-top {
+    padding-top: constant(safe-area-inset-top);
+}
+
+.pg-safe-area-bottom {
+    padding-bottom: constant(safe-area-inset-bottom);
+}
