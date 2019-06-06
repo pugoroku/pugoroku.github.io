@@ -1,6 +1,15 @@
 ---
 ---
 
-#contact .pg-item {
+.pg-item {
     text-align: center;
+}
+
+#download div.row div.row {
+    margin: 20px 0;
+
+    .pg-item img {
+        width: 189px;
+        height: 56px;
+    }
 }
