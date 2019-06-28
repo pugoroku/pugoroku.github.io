@@ -1,11 +1,20 @@
 ---
 ---
 
+@import "layout";
+
 .pg-item {
     text-align: center;
 }
 
-#download div.row div.row {
+#about {
+    display: block;
+    position: relative;
+    top: -($nav-height + $section-padding-top);
+    visibility: hidden;
+}
+
+#download-section div.row div.row {
     margin: 20px 0;
 
     .pg-item img {

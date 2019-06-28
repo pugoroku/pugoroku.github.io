@@ -3,6 +3,7 @@
 
 @charset "utf-8";
 @import "color";
+@import "layout";
 
 body {
     background-color: $theme-color;
@@ -31,8 +32,8 @@ nav {
 
 section {
     background-color: $normal-color;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: $section-padding-top;
+    padding-bottom: $section-padding-bottom;
 }
 
 footer {
