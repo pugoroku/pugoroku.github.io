@@ -55,6 +55,10 @@ a {
     color: $theme-color;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
 .btn-primary {
     background-color: $accent-color;
     border-color: $accent-color;
