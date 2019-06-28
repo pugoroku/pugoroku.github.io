@@ -57,6 +57,11 @@ a {
 .btn-primary {
     background-color: $accent-color;
     border-color: $accent-color;
+
+    &:hover {
+        background-color: $accent-color-hover;
+        border-color: $accent-color-hover;
+    }
 }
 
 p.pg-button {
