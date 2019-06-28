@@ -107,3 +107,7 @@ canvas {
 .pg-safe-area-bottom {
     padding-bottom: constant(safe-area-inset-bottom);
 }
+
+span.pg-unit {
+    display: inline-block;
+}
